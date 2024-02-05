@@ -1,0 +1,87 @@
+/* Header/logo Title */
+
+
+
+.header {
+    padding: 20px;
+    text-align: center;
+    background: #483D8B;
+    opacity: 0.6;
+    color: white;
+}
+
+.body {
+    background-color: lightgrey;
+}
+/* Style the top navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #ebd6f5;
+}
+
+.navbar a {
+    display: block;
+    color: #483D8B;
+    float: left;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+/* Selects the active page and right-aligned and login */
+.navbar a.selected {
+    background-color: #483D8B;
+    color: white;
+}
+.navbar a.right.selected {
+    background-color: #483D8B;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ebd6f5;
+  }
+  
+  /* Makes navbar buttons float next to each other */
+  li {
+    float: left;
+  }
+  
+  /* Navbar format of links in buttons without interaction */
+  /* "vw" font size adapts to different window widths */
+  /* "Sofia" font linked to through Google fonts stylesheet */
+  li a {
+    display: block;
+    color: #483D8B;
+    font-family: "Sofia"; font-size: 3.5vw;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Makes navbar button turn color (currently lighter purple) when you hover over it */
+  li a:hover {
+    background-color: #ffe1ff;
+  }
+  
+  /* Shows which page user is currently on in navbar (curr light bluish) */
+  .active {
+    background-color: #a2add0;
+  }
+  .container 
+  {
+    width: 200px;
+    font-size: 12px;
+  }
+  .row 
+  {
+    display: block;
+  }
