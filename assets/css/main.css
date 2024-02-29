@@ -1,0 +1,1216 @@
+/* Header/logo Title */
+:root{
+  font-family: Arial, sans-serif; font-size: .8em;
+  background-color: #f0f0f9; /* Overall background light lavender*/
+  --header-color: #41327e; /* header dark purple-indigo */
+  --banner-text: black; /*header text*/
+  --lighter-purple: #ede8f8; /*lighter purple or use #f0f0f9 */
+  min-width: 390px;
+}
+
+/* ******************** centering content on pages, adding image to body background *************** */
+/* this smushes content into the center on all pages */
+.content{
+	width: 60%;
+	background-color: #f5f5fd;
+	padding: 20px;
+	margin: 0 auto; 
+}
+ 
+body {
+  margin: 0;
+  padding: 0;
+  
+  background-image: url('/wp-content/uploads/2024/02/booth3-2.jpg'); /* IMAGE */
+  /*linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* White overlay with 50% opacity */
+  background-size: cover; /* Cover ensures the background image fully covers the area */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Keeps the image fixed during scrolling */
+  
+}
+/* *******************************Header ******************************* */
+body{
+  max-width: 1500px;
+  margin: auto;
+}
+.background {
+   
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background-color: var(--header-color);
+/*   max-width: 1500px; */
+  color: rgb(50, 13, 51);
+  font-family: "MedievalSharp"; 
+  font-size: 1.4em;
+}
+
+.header-name-logo
+{
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--lighter-purple);
+  text-align: center;
+  border: solid #be9d30 6px;
+  border-radius: 25px;
+  display: flex;
+}
+.header-name-logo img
+{
+  padding: 20px;
+}
+.header-name
+{
+  flex: 1;
+  font-size: 2em;
+  
+}
+
+@media (max-width: 768px) {
+  .header-name{
+    font-size: 1.5em;
+  }
+} 
+
+/* ----------THIS IS THE CART --------------*/
+.header-cart{
+  position: relative;
+  
+  top: 140px; 
+  right: 25px;
+  text-align: right;
+}
+.header-cart a
+{
+  color: var(--header-color);
+  text-decoration: none;
+}
+.cart-icon-link {
+  position: relative;
+  font-size: 24px; 
+  text-decoration: none; 
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px; 
+  right: -10px;
+  background-color: #be9d30; 
+  color: var(--header-color);
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 12px; 
+  line-height: 20px; 
+  min-width: 20px; 
+  text-align: center;
+}
+/* -----------THIS IS THE CART -----------------*/
+.logo
+{
+display: block;
+max-width: 100px;
+height: auto;
+margin: 0 auto;
+padding: 20px 0;
+	
+
+}
+.header-name-logo img {
+	border-radius: 100px;
+}
+
+/* Selects the active page and right-aligned and login */
+.top-menu a.selected {
+  background-color: #483D8B;
+  color: white;
+}
+
+.top-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--lighter-purple);
+}
+
+/* Makes navbar buttons float next to each other */
+.top-menu li {
+float:inline-start;
+margin: auto;
+
+}
+
+.top-menu li a {
+display: block;
+color: #1b1636;
+font-family: "Arial"; font-size: 1.5em;
+text-align: center;
+border-right: solid rgb(74, 26, 72) 1px;
+padding: 5px 16px;
+text-decoration: none;
+}
+
+/* Makes navbar button turn color (currently lighter purple) when you hover over it */
+.top-menu li a:hover {
+  background-color: #ffe1ff;
+}
+
+/* Shows which page user is currently on in navbar (curr light bluish) */
+.top-menu .active {
+  background-color: #a2add0;
+}
+
+
+
+
+
+/* Hide the hamburger menu on larger screens */
+.mobile-nav-view .hamburger-menu {
+  height: 50px; /* Same as the desktop menu */
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--lighter-purple);
+  border: none;
+
+  cursor: pointer;
+    z-index: 11; /* Ensure it's above the overlay */
+    position: relative;
+
+}
+.mobile-nav-view .hamburger-menu .bar {
+  width: 35px; /* Width of the hamburger icon bars */
+  height: 4px; /* Height of each bar */
+  background-color: #333; /* Color of the bars */
+  margin: 6px 0; /* Spacing between bars */
+  
+  display: block;
+    height: 2px;
+    background: #333;
+    margin: 5px 0;
+    
+}
+.mobile-nav-view .mobile-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 231px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 10; 
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-nav-view .mobile-menu ul {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.719);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.mobile-nav-view .mobile-menu ul li a {
+  color: #1b1b1b;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgb(218, 183, 212);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 30% 5% 25%;
+  display: block;
+}
+
+
+/* Active state for mobile menu */
+.mobile-nav-view .mobile-menu.active {
+  display: block; /* Show the menu */
+  
+}
+.mobile-nav-view .mobile-menu.active .side-menu {
+  display: block; 
+  
+}
+
+/* Responsive Styles */
+@media (max-width: 750px) {
+  .top-menu {
+      display: none;
+  }
+
+  .mobile-nav-view {
+      display: flex;
+  }
+}
+@media (min-width: 751px) {
+  .mobile-nav-view {
+    display: none;
+  }
+}
+/* *******************************Header ******************************* */
+
+
+
+
+
+/* Page CONTAINER */
+
+.page-containerr{
+    display: flex;
+}
+
+.page-title{
+  text-align: center;
+}
+
+.woocommerce{
+    margin: auto; /* centers the woocommerce div */
+    max-width: 70%; 
+    font-size: 12px;
+    background-color: white;
+    
+    text-overflow: ellipsis;
+    white-space: nowrap;  
+}
+.woocommerce-cart-form .product-thumbnail{
+  width: 50px;
+  
+}
+
+
+/* *******************************FRONT PAGE ******************************* */
+
+.front-page-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px; 
+  margin: 15px auto;
+  max-width: 1500px;
+  min-width: 390px;
+  
+}
+
+/* Keeps the two page sections together  */
+.front-page-sections > section {
+  flex: 1;
+  /* min-width: 300px;  */
+  /* background-color: #fcf8ff; */
+}
+
+/*Box around the ALL events and SHOP listings */
+.events-sidebar, .shop-listings {
+  
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* shadow  */
+  border-radius: 5px; /* Rounded corners */
+  
+}
+
+
+/* Sidebar Styling */
+.events-sidebar {
+  max-width: 20%; 
+  height: auto; /* Adjust height as needed */
+  background-color: var(--header-color);
+  color: white;
+  /* Keep existing styling */
+}
+@media (max-width: 768px) {
+  .events-sidebar {
+    padding: 7px;
+    max-width: 40%;
+    
+  }
+}
+
+/* Main Content Styling */
+.products-gallery {
+  flex: 1; 
+  /* Keep existing styling */
+}
+
+
+
+/* Style for each event and product */
+.events-sidebar .event, .shop-listings .product {
+background-color: #ebe3f1; /*background for each item */
+border: 3px solid #be9d3046; /* border */
+margin-bottom: 20px; 
+padding: 20px; 
+border-radius: 3px; /* Rounded corners  */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+transition: all 0.3s ease; /*hover effects */
+}
+@media (max-width: 768px) {
+  .events-sidebar .event {
+    padding: 7px;
+  }  
+}
+.events-sidebar .event a{
+  text-decoration: none;
+}
+
+
+
+/* Hover effect for each item */
+.events-sidebar .event:hover, .shop-listings .product:hover {
+transform: translateY(-5px); /* Moves Object up*/
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /*shadow on hover */
+}
+
+/* Title styling */
+.events-sidebar .event h3, .shop-listings .product h3 {
+margin-top: 0;
+margin-bottom: 10px;
+color: #381546; 
+font-size: 1.10em; 
+
+}
+
+/* Description and price styling */
+.events-sidebar .event p, .shop-listings .product .product-price {
+margin-top: 0;
+padding: 3px;
+border: #676;
+border-radius: 5px;
+color: rgb(48, 48, 54); 
+background-color: #c0b1ca;
+
+}
+
+/* Specific style for product price */
+.products-gallery .product .product-price {
+font-weight: bold; 
+margin-top: 15px; 
+
+}
+
+.button_add_to_cart_button{
+	color: #3b5998;
+	
+	
+}
+.button_add_to_cart_button:hover{
+	background-color: lightblue;
+	padding: 5px;
+	border-radius: 5px;
+	
+	
+}
+
+/* Adjust image styles */
+.events-sidebar .event img, .shop-listings .product img {
+max-width: 100%; 
+height: auto; /* Maintain aspect ratio */
+border-radius: 3px; 
+
+}
+
+
+
+
+.front-page-sections .products-gallery-outer h2{
+  background-color: var(--header-color);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Shop page GRID of images*/
+.front-page-sections .products-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px; /* Adjust the space between items */
+  margin-top: 20px;
+}
+
+.front-page-sections .product {
+  border: 1px solid #ddd; 
+  padding: 10px;
+  background: #fff; 
+  text-align: center; /* Center the text */
+   
+}
+
+.front-page-sections .product:hover {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+}
+
+.products-gallery a{
+  text-decoration: none;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-price {
+  margin-top: 10px; 
+  font-weight: bold;
+}
+
+.product-description {
+  margin-top: 10px; 
+
+}
+
+
+/* *******************************shop PAGE ******************************* */
+
+/* welcome traveler blurb */
+.shop-h3 {
+	font-family: Arial;
+	color: black;
+	text-align: center;
+	padding: 20, 20, 20, 20;
+
+/* font-family: "Mansalva"; font-size:2.0vw; */
+}
+
+/* shop title */
+.woo-shop-container h1 {
+	font-family: Arial;
+	color: black;
+	text-align: center;
+}
+/* headers for item categories */
+.shop-h2 {
+color: black;
+text-align: left;
+/* font-family: "Mansalva"; font-size:3.0vw; */
+}
+
+
+
+/*-------------------------------- THis is for WOO -----------------------------------------*/
+/* WooCommerce shop page container */
+.shop-container {
+max-width: 1200px;
+margin: auto;
+padding: 20px;
+background-color: #fff; 
+}
+
+.woo-shop-container {
+  margin-left: 135px;
+}
+
+
+.category-section h2{
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: var(--header-color);
+}
+
+
+/* Ensures that the product items are centered in the row */
+.shop-container .row {
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+/* Styles for individual product items */
+.shop-container .row li.product {
+box-sizing: border-box;
+width: calc(33.333% - 20px); 
+margin: 10px;
+padding: 20px;
+background: #f9f9f9; /* Light grey background for each product */
+border: 1px solid #ddd; /* Light border for product items */
+text-align: center; /* Centering text */
+vertical-align: top;
+}
+
+/* Ensure images are the same size */
+.shop-container .row li.product img {
+width: 100%;
+height: auto;
+object-fit: cover; /* This will cover the area, consider 'contain' for no cropping */
+}
+
+/* Product title styling */
+.shop-container .row li.product h2.woocommerce-loop-product__title {
+font-size: 1.1em;
+margin-top: 15px;
+min-height: 60px; /* Adjust or remove min-height as needed to ensure consistent height */
+}
+
+/* Price styling */
+.shop-container .row li.product .price {
+font-size: 1em;
+margin: 10px 0;
+}
+
+/* Add to cart button styling */
+.shop-container .row li.product .button {
+background-color: #0071a1;
+color: #fff;
+padding: 10px 15px;
+display: inline-block;
+text-transform: uppercase;
+font-weight: bold;
+border: none;
+border-radius: 2px;
+transition: background 0.3s ease;
+}
+
+.shop-container .row li.product .button:hover {
+background-color: #005880;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+.shop-container .row li.product {
+    width: calc(50% - 20px); /* 2 columns for smaller screens */
+}
+}
+
+@media (max-width: 480px) {
+.shop-container .row li.product {
+    width: calc(100% - 20px); /* Full width for very small screens */
+}
+}
+
+
+/* Shop page GRID of images*/
+.shop-listings .products-gallery {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: 20px; /* Adjust the space between items */
+margin-top: 20px;
+}
+
+.shop-listings .product {
+border: 1px solid #ddd; 
+padding: 10px;
+background: #fff; 
+text-align: center; /* Center the text */
+}
+
+.shop-listings .product:hover {
+box-shadow: 0px 0px 10px rgba(0,0,0,0.1); 
+}
+
+.product-image img {
+max-width: 100%;
+height: auto;
+}
+
+.product-price {
+margin-top: 10px; 
+font-weight: bold;
+}
+
+.product-description {
+margin-top: 10px; 
+}
+
+
+/* Product overlayer */
+#productOverlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 1000;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.overlay-content {
+background: white;
+padding: 20px;
+border-radius: 5px;
+position: relative;
+max-width: 500px;
+width: 90%;
+}
+
+.close-btn {
+position: absolute;
+
+top: 10px;
+right: 10px;
+cursor: pointer;
+font-size: 25px;
+background-color: rgba(255, 0, 0, 0.671);
+padding-left: 7.5px;
+padding-right: 7.5px;
+border-radius: 80px;
+}
+.overlay-content img {
+max-width: 90%;
+height: auto;
+margin-bottom: 20px;
+}
+
+.category-buttons .button {
+  padding: 10px 15px;
+  margin: 5px;
+  display: inline-block;
+  background-color: var(--header-color);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.category-buttons .button:hover {
+  background-color: #b97ab4;
+}
+
+.category-buttons {
+  position: fixed;
+  top: 350px; 
+  left: 0;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 10px;
+  width: 50px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.swiper-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.swiper-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 5px; 
+}
+
+.swiper-button-prev, .swiper-button-next {
+  /* background-color: #000; */
+  color: #6c0d74;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+  opacity: 1;
+}
+/* Style for all slides */
+.swiper-slide {
+  opacity: 0.2; /* Dim non-active slides */
+  transition: opacity 0.5s; 
+}
+
+/* Style for the active slide */
+.swiper-slide-active {
+  opacity: 1; /* Fully opaque for active slide */
+  margin-left: 5%;
+}
+
+
+
+
+/*-------------------------------- THis is for WOO shop page -----------------------------------------*/
+/* This is the CART CSS */
+
+.woocommerce {
+    padding: 20px;
+}
+
+
+.woocommerce-message .wc-forward {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+}
+
+.woocommerce-message .wc-forward:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+/* FOR CUSTOM ORDER */
+
+.custom-order-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px; /* Space between grid items */
+  margin-bottom: 40px; 
+  margin-top: 40px;
+}
+
+
+
+.custom-order-product img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; 
+}
+
+.custom-order-product:hover img {
+  transform: scale(1.05); 
+}
+
+.custom-order-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 5px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* *******************************About Page ******************************* */
+/*header for About Us page*/
+.about-page-h1 {
+color: #4B0082;
+text-align: center;
+font-family: Arial; font-size: 25px;
+font-weight: bold;
+}
+
+/*introduction paragrapgh*/
+.about-page-h3 {
+color: black;
+text-align: center;
+font-size: 18px; font-family: Arial
+font-weight: lighten
+}
+.contact-page-contactinfo {
+	padding: 10px;
+	background-color: white;
+	border: 1px solid #ccc;
+  	border-radius: 4px;
+}
+
+/* ---------------------------EVENTS---------------------------------------- */
+
+/* General Page Styling */
+.page-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.event-header,
+.upcoming-events {
+  margin-bottom: 40px;
+}
+
+/* Wrapper for Blurb and Social Media */
+.events-info-social-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 40px 0;
+}
+
+.events-blurb, .social-media {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Additional padding for spacing between sections */
+.events-blurb {
+  margin-right: 20px; /* Adjust as needed for your layout */
+}
+
+/* Styling for Upcoming Events Blurb */
+.events-blurb {
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.events-blurb  h2 {
+padding: 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: var(--header-color);
+}
+
+/* Social Media Links */
+.social-media {
+  text-align: center;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.social-media h2 {
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.facebook-link {
+  background-color: #3b5998;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block; /* To apply padding and background color */
+  transition: background-color 0.3s ease;
+}
+
+.facebook-link:hover {
+  background-color: #2d4373;
+}
+
+
+/* Subscription Box Styling */
+.subscribe-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.email-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 250px;
+}
+
+.btn-subscribe {
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-subscribe:hover {
+  background-color: #004494;
+}
+
+/* Events Grid Styling */
+.upcoming-events {
+	background: #ffffff;
+  border: 1px solid #e1e1e1;
+  padding: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.upcoming-events h2 {
+padding: 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: var(--header-color);
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  padding: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.event-image img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  display: block; 
+}
+
+
+.event-description {
+  padding: 15px;
+}
+
+/* h3 {
+  margin-top: 0;
+} */
+
+/* ---------------------------EVENTS---------------------------------------- */
+
+
+
+
+/* *******************************Contact Page ******************************* */
+.contact-page-form{
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.form-contact {
+	margin-bottom: 5px
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+input[type="name"],
+input[type="email"],
+input[type="message"],
+textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 16px;
+	font-family: Arial
+		
+}
+button[type="submit"]{
+	background-color: #4B0082;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.contact-info {
+color: #4B0082;
+text-align: center;
+margin-top: 40px;
+margin-bottom: 40px;
+font-size: 20px;
+font-family: Arial;
+font-weight: bold;
+}
+
+.contact-form {
+color: #4B0082;
+text-align: center;
+margin-top: 40px;
+font-size: 20px;
+font-family: Arial
+font-weight: lighter;
+}
+
+
+
+
+/***************************GALLERY************************************/
+/* Container holding the gallery */
+.gallery-page-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+/* Individual image containers */
+.gallery-page-images {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-page-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /*lets images be snug against each other */
+}
+
+/*************************** END GALLERY************************************/
+
+/* *******************************Footer ******************************* */
+/* overall footer */
+.site-footer {
+  background-color: var(--header-color); 
+  color: white; 
+  padding: 20px; 
+  text-align: center; 
+  text-decoration: none;
+  
+}
+
+
+/* puts lists of info into columns */ 
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.columns div {
+  flex: 1; /* makes each child div take up equal space */
+  padding: 0 20px; 
+}
+
+
+/* social media follow us */
+.footer-social-media h3 {
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: inherit;
+}
+
+.footer-social-media ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+  display: inline-flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.footer-social-media ul li {
+  display: inline;
+}
+
+.footer-social-media ul li  {
+  color: white; 
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+
+.footer-social-media ul li a:hover {
+  background-color: #555; 
+}
+
+/* for developers list */
+
+
+.footer-developers h3 {
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: inherit;
+}
+
+.footer-developers ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+  display: inline-flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+.footer-developers ul li {
+  display: block;
+}
+
+.footer-developers ul li  {
+  color: white; 
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+
+.footer-developers ul li a:hover {
+  background-color: #555; 
+}
+
+
+/* disclaimer */
+.footer-disclaimer{
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: inherit;
+}
+
+
+/* for contact info */
+.footer-contact-info h3 {
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: inherit;
+}
+.footer-contact-info ul {
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0;
+}
+
+.footer-contact-info ul li {
+  display: block; /* to make each item appear on its own line */
+  color: white; 
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+.footer-contact-info ul li a {
+  display: block; /* to make each item appear on its own line */
+  color: white; 
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px; 
+  transition: background-color 0.3s; 
+}
+
+
+
+
+/*.footer-login {
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #484171;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+.footer-login a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.footer-login:hover {
+  background-color: #770055;
+}*/
+
+
+
+
+
+
+
+
+/* *******************************Footer ******************************* */
+
+
